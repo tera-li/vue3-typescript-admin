@@ -21,7 +21,7 @@
       class="main-container"
     >
       <div :class="{'fixed-header': fixedHeader}">
-        <Navbar />
+        <NavBar />
         <TagsView v-if="showTagsView" />
       </div>
       <AppMain />
@@ -38,14 +38,14 @@ import { computed, defineComponent, onBeforeMount, onBeforeUnmount, onMounted, r
 import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
 import { AppActionTypes } from '@/store/modules/app/action-types'
-import { AppMain, Navbar, Settings, TagsView, Sidebar } from './components'
+import { AppMain, Navbar as NavBar, Settings, TagsView, Sidebar } from './components'
 import RightPanel from '@/components/right_panel/Index.vue'
 import resize from './resize'
 export default defineComponent({
   name: 'Layout',
   components: {
     AppMain,
-    Navbar,
+    NavBar,
     RightPanel,
     Settings,
     Sidebar,

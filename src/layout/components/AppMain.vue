@@ -12,7 +12,15 @@
       mode="out-in"
     >
       <keep-alive :include="cachedViews">
-        <router-view :key="key" />
+        <router-view
+          :key="key"
+          v-slot="{Component}"
+        >
+          <component
+            class="view"
+            :is="Component"
+          />
+        </router-view>
       </keep-alive>
     </transition>
   </section>
@@ -20,19 +28,22 @@
 
 <script lang="ts">
 import { useStore } from '@/store'
-import { defineComponent } from 'vue'
+import { defineComponent, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({
   setup() {
     const store = useStore()
     const route = useRoute()
-    const cachedViews = () => {
+    const cachedViews = (): (String | undefined)[] => {
       return store.state.tagViews.cachedViews
     }
     const key = () => {
       return route.path
     }
+    watch(() => store.state.tagViews, (value) => {
+      console.log(value)
+    })
     return {
       cachedViews,
       key
@@ -50,7 +61,7 @@ export default defineComponent({
   overflow: hidden;
 }
 
-.fixed-header+.app-main {
+.fixed-header + .app-main {
   padding-top: 50px;
   height: 100vh;
   overflow: auto;
@@ -62,7 +73,7 @@ export default defineComponent({
     min-height: calc(100vh - 84px);
   }
 
-  .fixed-header+.app-main {
+  .fixed-header + .app-main {
     padding-top: 84px;
   }
 }
