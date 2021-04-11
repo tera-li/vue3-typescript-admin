@@ -191,7 +191,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 svg {
-  margin-right: 16px;
+  margin-right: 20px;
 }
 
 .simple-mode {
