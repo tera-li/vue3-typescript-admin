@@ -19,7 +19,7 @@
     />
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
-        <Screenfull class="right-menu-item hover-effect" />
+        <ScreenFull class="right-menu-item hover-effect" />
         <LangSelect class="right-menu-item hover-effect" />
       </template>
       <el-dropdown
@@ -76,7 +76,7 @@
 <script>
 import BreadCrumb from '@/components/bread-crumb/Index.vue'
 import Hamburger from '@/components/hamburger/Index.vue'
-import Screenfull from '@/components/screenfull/Index.vue'
+import ScreenFull from '@/components/screenfull/Index.vue'
 import LangSelect from '@/components/lang_select/Index.vue'
 
 import { computed, reactive, toRefs } from 'vue'
@@ -89,7 +89,7 @@ export default {
   components: {
     BreadCrumb,
     Hamburger,
-    Screenfull,
+    ScreenFull,
     LangSelect
   },
   setup() {

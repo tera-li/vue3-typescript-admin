@@ -7,7 +7,6 @@
  */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Layout from '@/layout/Index.vue'
-import { shallowRef } from 'vue'
 
 const constantFiles = require.context('./constantModules', true, /\.ts$/)
 let constantModules: Array<RouteRecordRaw> = []
@@ -22,8 +21,7 @@ asyncFiles.keys().forEach((key) => {
   if (key === './index.ts') return
   permissionModules = permissionModules.concat(asyncFiles(key).default)
 })
-const data = shallowRef(Layout)
-console.log(data.value)
+// const data = shallowRef(Layout)
 export const constantRoutes: Array<RouteRecordRaw> = [
   {
     path: '/redirect',

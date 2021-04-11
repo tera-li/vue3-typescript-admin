@@ -20,8 +20,6 @@ const app = createApp(App)
 // 加载所有插件
 loadAllPlugins(app)
 
-console.error(process.env.VUE_APP_BASE_API)
-
 // 自定义指令
 Object.keys(directives).forEach(key => {
   app.directive(key, (directives as { [key: string ]: Directive })[key])
