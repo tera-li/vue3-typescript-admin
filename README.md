@@ -274,8 +274,3 @@ Modern browsers and Internet Explorer 10+.
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | IE10, IE11, Edge                                             | last 2 versions                                              | last 2 versions                                              | last 2 versions                                              |
 
-## License
-
-[MIT](https://github.com/rcyj-FED/vue3-composition-admin/blob/main/LICENSE)
-
-Copyright (c) 2021-present 人才有价

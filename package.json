@@ -6,12 +6,12 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "build:dev": "cross-env NODE_ENV=production  dotenv -e .env.dev.build vue-cli-service build",
+    "build:dev": "cross-env NODE_ENV=development  dotenv -e .env.dev.build vue-cli-service build",
     "build:prod": "cross-env NODE_ENV=production  dotenv -e .env.prod.build vue-cli-service build",
-    "build:test": "cross-env NODE_ENV=production  dotenv -e .env.test.build vue-cli-service build",
+    "build:test": "cross-env NODE_ENV=development  dotenv -e .env.test.build vue-cli-service build",
     "mock": "cd mock && ts-node-dev mock.ts",
     "serve:dev": "cross-env NODE_ENV=development dotenv -e .env.dev.serve vue-cli-service serve",
-    "serve:prod": "cross-env NODE_ENV=development dotenv -e .env.prod.serve vue-cli-service serve",
+    "serve:prod": "cross-env NODE_ENV=production dotenv -e .env.prod.serve vue-cli-service serve",
     "serve:test": "cross-env NODE_ENV=development dotenv -e .env.test.serve vue-cli-service serve"
   },
   "dependencies": {
