@@ -1,11 +1,3 @@
-<!--
- * @Description:
- * @Author: ZY
- * @Date: 2020-12-25 11:34:20
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-27 19:17:44
--->
-
 <template>
   <a
     v-if="isExternal(to)"
@@ -37,7 +29,6 @@ export default defineComponent({
   setup(props) {
     const router = useRouter()
     const push = () => {
-      console.log(props.to)
       router.push(props.to).catch((err) => {
         console.log(err)
       })

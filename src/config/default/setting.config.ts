@@ -1,11 +1,3 @@
-/*
- * @Description: 设置属性类
- * @Author: ZY
- * @Date: 2020-12-08 09?:45?:47
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-25 19:58:42
- */
-
 import { Language, Environment, RouterSource, RouterMode, TokenStorageName } from '@/constant/settings'
 
 export interface Settings{

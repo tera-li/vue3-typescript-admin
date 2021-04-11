@@ -1,10 +1,3 @@
-/*
- * @Description:配置文件
- * @Author: ZY
- * @Date: 2020-12-07 11:41:22
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-27 15:17:29
- */
 const { resolve } = require('path')
 const path = require('path')
 const WebpackBar = require('webpackbar');

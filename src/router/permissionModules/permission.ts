@@ -1,11 +1,3 @@
-/*
- * @Description:
- * @Author: ZY
- * @Date: 2021-01-08 19:32:52
- * @LastEditors: scy😊
- * @LastEditTime: 2021-01-23 15:55:22
- */
-
 import { RouteRecordRaw } from 'vue-router'
 import Layout from '@/layout/Index.vue'
 

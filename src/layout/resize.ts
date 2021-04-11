@@ -1,12 +1,3 @@
-/*
- * @Description: 根绝大小变化重新布局
- * @Author: ZY
- * @Date: 2020-12-17 15:37:56
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-28 16:29:49
- */
-// refer to Bootstrap's responsive design
-
 import { useStore } from '@/store'
 import { AppActionTypes } from '@/store/modules/app/action-types'
 import { DeviceType } from '@/store/modules/app/state'

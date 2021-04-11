@@ -1,11 +1,3 @@
-<!--
- * @Description: 侧边栏item
- * @Author: ZY
- * @Date: 2020-12-25 11:34:00
- * @LastEditors: scy😊
- * @LastEditTime: 2021-01-25 08:47:38
--->
-
 <template>
   <div
     v-if="!item.meta || !item.meta.hidden"

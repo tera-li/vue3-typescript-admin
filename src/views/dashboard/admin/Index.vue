@@ -1,10 +1,3 @@
-<!--
- * @Description: admin 权限主页
- * @Author: ZY
- * @Date: 2021-01-15 18:44:25
- * @LastEditors: ZY
- * @LastEditTime: 2021-03-10 13:52:26
--->
 <template>
   <div class="dashboard-editor-container">
     <el-row :gutter="8">

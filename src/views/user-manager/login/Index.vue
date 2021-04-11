@@ -1,11 +1,3 @@
-<!--
- * @Description: 登录页面
- * @Author: ZY
- * @Date: 2020-12-28 16:27:50
- * @LastEditors: ZY
- * @LastEditTime: 2021-03-10 13:41:17
--->
-
 <template>
   <div class="login-container">
     <video

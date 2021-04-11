@@ -1,10 +1,3 @@
-<!--
- * @Description:  切换角色控件
- * @Author: ZY
- * @Date: 2021-01-11 15:45:24
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-11 17:45:04
--->
 <template>
   <div>
     <div style="margin-bottom:15px;">

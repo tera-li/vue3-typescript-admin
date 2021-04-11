@@ -1,10 +1,3 @@
-<!--
- * @Description:
- * @Author: ZY
- * @Date: 2021-01-13 21:30:42
- * @LastEditors: WJM
- * @LastEditTime: 2021-01-21 17:35:39
--->
 <template>
   <ImageCropUpload
     v-model="show"

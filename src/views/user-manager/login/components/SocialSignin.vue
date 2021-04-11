@@ -1,11 +1,3 @@
-<!--
- * @Description: 社会化授权登录
- * @Author: ZY
- * @Date: 2020-12-30 16:48:55
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-04 11:48:48
--->
-
 <template>
   <div class="social-signup-container">
     <div

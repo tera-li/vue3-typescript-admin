@@ -1,10 +1,3 @@
-<!--
- * @Description: 导航栏
- * @Author: ZY
- * @Date: 2020-12-17 15:52:19
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-27 19:16:50
--->
 <template>
   <div class="navbar">
     <Hamburger

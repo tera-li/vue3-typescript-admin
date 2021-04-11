@@ -1,10 +1,3 @@
-/*
- * @Description: 主题配置
- * @Author: ZY
- * @Date: 2020-12-08 09:45:59
- * @LastEditors: ZY
- * @LastEditTime: 2020-12-09 10:16:28
- */
 // 布局枚举
 enum Layout{
     Horizontal,

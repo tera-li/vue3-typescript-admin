@@ -1,11 +1,3 @@
-<!--
- * @Description: 全屏按钮
- * @Author: ZY
- * @Date: 2020-12-23 18:11:46
- * @LastEditors: ZY
- * @LastEditTime: 2020-12-25 10:14:19
--->
-
 <template>
   <div id="screenfull">
     <div

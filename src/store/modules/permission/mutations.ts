@@ -1,10 +1,4 @@
-/*
- * @Description:
- * @Author: ZY
- * @Date: 2020-12-25 14:28:12
- * @LastEditors: ZY
- * @LastEditTime: 2020-12-25 15:03:37
- */
+import { markRaw } from 'vue'
 import { MutationTree } from 'vuex'
 import { PermissionState } from './state'
 import { PermissionMutationType } from './mutation-types'
@@ -18,7 +12,7 @@ export type Mutations<S = PermissionState> = {
 export const mutations: MutationTree<PermissionState> & Mutations = {
   [PermissionMutationType.SET_ROUTES](state: PermissionState, routes: RouteRecordRaw[]) {
     state.routes = constantRoutes.concat(routes)
-    state.dynamicRoutes = routes
+    state.dynamicRoutes = markRaw(routes)
   }
 
 }

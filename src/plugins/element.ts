@@ -1,11 +1,3 @@
-/*
- * @Description: element 组件
- * @Author: ZY
- * @Date: 2020-12-25 08:45:49
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-26 13:25:55
- */
-
 // import {
 //   ElButton,
 //   ElSelect,

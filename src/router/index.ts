@@ -1,10 +1,3 @@
-/*
- * @Description:
- * @Author: ZY
- * @Date: 2020-12-07 10:30:20
- * @LastEditors: ZY
- * @LastEditTime: 2021-01-27 20:10:59
- */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Layout from '@/layout/Index.vue'
 
@@ -21,7 +14,7 @@ asyncFiles.keys().forEach((key) => {
   if (key === './index.ts') return
   permissionModules = permissionModules.concat(asyncFiles(key).default)
 })
-// const data = shallowRef(Layout)
+
 export const constantRoutes: Array<RouteRecordRaw> = [
   {
     path: '/redirect',
