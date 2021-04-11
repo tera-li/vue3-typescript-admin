@@ -7,8 +7,6 @@
 -->
 <template>
   <div class="dashboard-editor-container">
-    <GithubCorner class="github-corner" />
-
     <el-row :gutter="8">
       <el-col
         :xs="{span: 24}"
@@ -19,19 +17,6 @@
         style="padding-right:8px;margin-bottom:30px;"
       >
         <DependsTable />
-      </el-col>
-    </el-row>
-
-    <el-row>
-      <el-col
-        :xs="{span: 24}"
-        :sm="{span: 24}"
-        :md="{span: 24}"
-        :lg="{span: 16}"
-        :xl="{span: 16}"
-        style="padding-right:8px;margin-bottom:30px;"
-      >
-        <UpdateTimeline />
       </el-col>
     </el-row>
   </div>
