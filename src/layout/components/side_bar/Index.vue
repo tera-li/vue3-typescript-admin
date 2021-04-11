@@ -60,8 +60,6 @@ export default defineComponent({
     })
 
     const menuActiveTextColor = computed(() => {
-      console.log(store.state.settings.sidebarTextTheme)
-
       if (store.state.settings.sidebarTextTheme) {
         return store.state.settings.theme
       } else {
@@ -71,7 +69,7 @@ export default defineComponent({
 
     const activeMenu = computed(() => {
       const { meta, path } = route
-      if (meta !== null || meta !== undefined) {
+      if (meta) {
         if (meta.activeMenu) {
           return meta.activeMenu
         }

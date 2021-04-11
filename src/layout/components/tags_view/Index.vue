@@ -124,6 +124,7 @@ export default defineComponent({
         })
       },
       closeSelectedTag: (view: TagView) => {
+        console.log(TagsActionTypes.ACTION_DEL_VIEW)
         store.dispatch(TagsActionTypes.ACTION_DEL_VIEW, view)
         if (state.isActive(view)) {
           toLastView(store.state.tagViews.visitedViews, view)

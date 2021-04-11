@@ -7,7 +7,6 @@
  */
 import { createApp, Directive } from 'vue'
 import App from './App.vue'
-// import './pwa/registerServiceWorker'
 import router from './router'
 import { store } from './store'
 import { loadAllPlugins } from './plugins'
@@ -21,7 +20,7 @@ const app = createApp(App)
 // 加载所有插件
 loadAllPlugins(app)
 
-console.log(process.env.VUE_APP_BASE_API)
+console.error(process.env.VUE_APP_BASE_API)
 
 // 自定义指令
 Object.keys(directives).forEach(key => {
