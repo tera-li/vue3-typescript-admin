@@ -1,17 +1,14 @@
 <template>
   <section class="app-main">
-    <router-view
-      :key="key"
-      v-slot="{Component}"
-    >
-      <transition
-        name="router-fade"
-        mode="out-in"
-      >
-        <keep-alive :include="cachedViews()">
+    <router-view v-slot="{Component}">
+      <keep-alive :include="cachedViews()">
+        <transition
+          name="router-fade"
+          mode="out-in"
+        >
           <component :is="Component" />
-        </keep-alive>
-      </transition>
+        </transition>
+      </keep-alive>
     </router-view>
   </section>
 </template>

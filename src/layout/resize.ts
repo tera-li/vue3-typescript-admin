@@ -56,6 +56,8 @@ export default function() {
     resizeMounted,
     addEventListenerOnResize,
     removeEventListenerResize,
-    watchRouter
+    watchRouter,
+    isMobile,
+    resizeHandler
   }
 }
