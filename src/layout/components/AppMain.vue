@@ -2,12 +2,7 @@
   <section class="app-main">
     <router-view v-slot="{Component}">
       <keep-alive :include="cachedViews()">
-        <transition
-          name="router-fade"
-          mode="out-in"
-        >
-          <component :is="Component" />
-        </transition>
+        <component :is="Component" />
       </keep-alive>
     </router-view>
   </section>
