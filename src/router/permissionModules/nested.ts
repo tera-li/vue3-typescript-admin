@@ -11,7 +11,7 @@ import Layout from '@/layout/Index.vue'
 const nestedRouter: Array<RouteRecordRaw> = [{
   path: '/nested',
   component: Layout,
-  redirect: '/nested/menu1',
+  redirect: '/nested/menu2',
   name: 'Nested',
   meta: {
     title: 'nested',

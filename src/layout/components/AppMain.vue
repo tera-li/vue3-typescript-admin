@@ -7,28 +7,25 @@
 -->
 <template>
   <section class="app-main">
-    <transition
-      name="fade-transform"
-      mode="out-in"
+    <router-view
+      :key="key"
+      v-slot="{Component}"
     >
-      <keep-alive :include="cachedViews">
-        <router-view
-          :key="key"
-          v-slot="{Component}"
-        >
-          <component
-            class="view"
-            :is="Component"
-          />
-        </router-view>
-      </keep-alive>
-    </transition>
+      <transition
+        name="router-fade"
+        mode="out-in"
+      >
+        <keep-alive :include="cachedViews()">
+          <component :is="Component" />
+        </keep-alive>
+      </transition>
+    </router-view>
   </section>
 </template>
 
 <script lang="ts">
 import { useStore } from '@/store'
-import { defineComponent, watch } from 'vue'
+import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({
@@ -36,14 +33,11 @@ export default defineComponent({
     const store = useStore()
     const route = useRoute()
     const cachedViews = (): (String | undefined)[] => {
-      return store.state.tagViews.cachedViews
+      return [...store.state.tagViews.cachedViews]
     }
     const key = () => {
       return route.path
     }
-    watch(() => store.state.tagViews, (value) => {
-      console.log(value)
-    })
     return {
       cachedViews,
       key

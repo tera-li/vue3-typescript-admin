@@ -98,21 +98,13 @@ export default defineComponent({
   },
   setup(props) {
     const alwaysShowRootMenu = computed(() => {
-      if (props.item.meta && props.item.meta.alwaysShow) {
-        return true
-      } else {
-        return false
-      }
+      return !!(props.item.meta && props.item.meta.alwaysShow)
     })
 
     const showingChildNumber = computed(() => {
       if (props.item.children) {
         const showingChildren = props.item.children.filter((item) => {
-          if (item.meta && item.meta.hidden) {
-            return false
-          } else {
-            return true
-          }
+          return !(item.meta && item.meta.hidden)
         })
         return showingChildren.length
       }
