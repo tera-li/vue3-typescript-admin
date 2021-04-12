@@ -3,7 +3,7 @@
     ref="scrollContainerRef"
     :vertical="false"
     class="scroll-container"
-    @wheel.prevent="handleScroll"
+    @wheel.passive="handleScroll"
   >
     <slot />
   </el-scrollbar>
@@ -20,6 +20,7 @@ import {
   onBeforeUnmount,
   getCurrentInstance
 } from 'vue'
+
 export default defineComponent({
   emits: ['scroll'],
   setup(_, context) {
