@@ -35,5 +35,4 @@ export const mutations: MutationTree<UserState> & Mutations = {
   [UserMutationTypes.SET_EMAIL](state: UserState, email: string) {
     state.email = email
   }
-
 }

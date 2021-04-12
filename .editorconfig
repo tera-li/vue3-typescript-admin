@@ -1,4 +1,6 @@
-[*.{js,jsx,ts,tsx,vue}]
+root = true
+
+[*]
 # 设置字符集
 charset = utf-8
 # 缩进风格
@@ -11,3 +13,7 @@ end_of_line = crlf
 insert_final_newline = true
 # 删除代码前后空格
 trim_trailing_whitespace = true
+
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false

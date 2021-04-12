@@ -70,12 +70,14 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0-0",
     "gitmoji-cli": "^3.3.1",
     "husky": "^6.0.0",
     "lint-staged": "^9.5.0",
+    "prettier": "^2.2.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^2.0.0",
@@ -92,6 +94,7 @@
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
       "vue-cli-service lint",
+      "prettier --write",
       "eslint --cache --fix",
       "git add"
     ]

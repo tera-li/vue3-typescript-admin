@@ -12,7 +12,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-strongly-recommended',
-    '@vue/standard',
+    'plugin:prettier/recommended',
     '@vue/typescript/recommended'
   ],
   parserOptions: {

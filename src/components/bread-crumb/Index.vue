@@ -38,7 +38,7 @@ export default defineComponent({
       breadcrumbs: [] as Array<RouteLocationMatched>,
       getBreadcrumb: () => {
         let matched = currentRoute.matched.filter(
-          item => item.meta && item.meta.title
+          (item) => item.meta && item.meta.title
         )
         const frist = matched[0]
         if (!state.isDashboard(frist)) {
@@ -46,7 +46,7 @@ export default defineComponent({
             { path: '/dashboard', meta: { title: 'dashboard' } } as any
           ].concat(matched)
         }
-        state.breadcrumbs = matched.filter(item => {
+        state.breadcrumbs = matched.filter((item) => {
           return item.meta && item.meta.title && item.meta.breadcrumb !== false
         })
       },
@@ -56,21 +56,19 @@ export default defineComponent({
           return false
         }
         return (
-          name
-            .toString()
-            .trim()
-            .toLocaleLowerCase() === 'Dashboard'.toLocaleLowerCase()
+          name.toString().trim().toLocaleLowerCase() ===
+          'Dashboard'.toLocaleLowerCase()
         )
       },
       handleLink(item: any) {
         const { redirect, path } = item
         if (redirect) {
-          router.push(redirect).catch(err => {
+          router.push(redirect).catch((err) => {
             console.warn(err)
           })
           return
         }
-        router.push(pathCompile(path)).catch(err => {
+        router.push(pathCompile(path)).catch((err) => {
           console.warn(err)
         })
       }
@@ -78,7 +76,7 @@ export default defineComponent({
 
     watch(
       () => currentRoute.path,
-      path => {
+      (path) => {
         if (path.startsWith('/redirect/')) {
           return
         }
