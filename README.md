@@ -39,11 +39,6 @@ vue2+ts 版本：[vue-typescript-admin-template](https://github.com/Armour/vue-t
 
 vue3 发布之后，性能增强，速度 vue2 的倍数，打包体积都在减小（treeshaking），composition api 增加了项目可读性。
 
-项目目的：
-
-- 学习 vue3+ts
-- 保持 composition api 风格
-
 在线 demo 演示地址：https://admin-tmpl-test.rencaiyoujia.cn/
 
 ### 目录结构
