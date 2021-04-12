@@ -4,7 +4,6 @@
   </a>
 </p>
 
-
 <p align="center">
   <a href="https://github.com/vuejs/vue">
     <img src="https://img.shields.io/badge/vue-3.0-brightgreen.svg" alt="vue">
@@ -26,8 +25,7 @@
   </a>
 </p>
 
-
-> vue3-composition-admin 是一个管理端模板解决方案，它是基于vue3,ts和element-plus，项目都是以composition api风格编写。
+> vue3-composition-admin 是一个管理端模板解决方案，它是基于 vue3,ts 和 element-plus，项目都是以 composition api 风格编写。
 
 ## 简介
 
@@ -35,87 +33,18 @@
 
 版本：
 
-vue2+js版本：[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+vue2+js 版本：[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
 
-vue2+ts版本：[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) 
+vue2+ts 版本：[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
 
-vue3 发布之后，性能增强，速度vue2的倍数，打包体积都在减小（treeshaking），composition api 增加了项目可读性。
+vue3 发布之后，性能增强，速度 vue2 的倍数，打包体积都在减小（treeshaking），composition api 增加了项目可读性。
 
 项目目的：
 
-- 学习vue3+ts
+- 学习 vue3+ts
 - 保持 composition api 风格
 
-在线demo演示地址：https://admin-tmpl-test.rencaiyoujia.cn/
-
-
-### 功能
-
-```text
-- 用户管理
-	- 登录（视频背景）
-	- 注销
-	
-- 权限验证
-  - 页面权限
-  - 指令权限
-  - 权限配置
-  - 二步登录
-
-- 多环境发布 (对应serve,build)
-  - dev
-  - test
-  - prod
-  
-- 全局功能
-  - iconfont
-  - 国际化多语言
-  - 多种动态换肤
-  - 动态侧边栏（支持多级路由嵌套）
-  - 动态面包屑
-  - 快捷导航(标签页)
-  - 本地/后端 mock 数据
-  - Screenfull全屏
-  - 自适应收缩侧边栏
-
-- 编辑器
-  - 富文本
-
-- Excel
-  - 导出excel
-  - 导入excel
-  - 前端可视化excel
-  - 导出zip
-
-- 表格
-  - 动态表格
-  - 拖拽表格
-  - 内联编辑
-
-- 错误页面
-  - 401
-  - 404
-
-- 組件
-  - 头像上传
-  - 返回顶部
-  - 拖拽Dialog
-  - 拖拽Select
-  - 拖拽看板
-  - 列表拖拽
-  - Dropzone
-  - Sticky
-  - CountTo (to do)
-
-- 综合实例
-- 错误日志
-- Dashboard
-- 引导页
-- ECharts 图表
-- Clipboard(剪贴复制)
-```
-
-
+在线 demo 演示地址：https://admin-tmpl-test.rencaiyoujia.cn/
 
 ### 目录结构
 
@@ -128,7 +57,7 @@ admin-tmpl
 ├─ .env.test.build    # 测试环境
 ├─ .env.test.serve    # 测试环境本地
 ├─ .eslintrc.js       # eslint
-├─ README.md          
+├─ README.md
 ├─ dist               # 打包dist
 ├─ mock               # mock服务
 ├─ public             # 静态资源
@@ -156,7 +85,7 @@ admin-tmpl
 
 ## HighLight
 
-项目均已最新技术实现，Vue3配套升级全家桶和涉及的插件组件等
+项目均已最新技术实现，Vue3 配套升级全家桶和涉及的插件组件等
 
 项目采用技术:
 
@@ -172,17 +101,15 @@ vue next 系列:
 - [vuex-4.0](https://github.com/vuejs/vuex)
 - [vue-vue-i18n-next](https://github.com/panter/vue-i18next)
 
-
 ## Document
 
 - [博客文档地址](https://blog.csdn.net/zy_flyway/category_6335128.html)
 - [文档地址](https://rcyj-fed.github.io/vue3-composition-admin-docs/)
-- [文档项目git地址](https://github.com/rcyj-FED/vue3-composition-admin-docs)
-
+- [文档项目 git 地址](https://github.com/rcyj-FED/vue3-composition-admin-docs)
 
 ## Setup
 
-项目主要是前端和mock server（node）
+项目主要是前端和 mock server（node）
 
 ### 前后端都启动
 
@@ -200,38 +127,41 @@ or
 
 ### 单独启动 Mock
 
-后台模拟服务器和其他版本不同，采用koa2+Faker进行模拟。
+后台模拟服务器和其他版本不同，采用 koa2+Faker 进行模拟。
 
 - [Koa2](https://github.com/koajs/koa)
 - [Faker](https://github.com/Marak/faker.js)
 
-启动mock server:
+启动 mock server:
 
 ```shell
     yarn mock
 ```
+
 or
+
 ```shell
     npm run mock
 ```
 
 mock 需要部署到服务器，单独项目地址：https://github.com/rcyj-FED/admin-tmpl-mock
-mock在线测试地址：https://admin-tmpl-mock-test.rencaiyoujia.cn/
+mock 在线测试地址：https://admin-tmpl-mock-test.rencaiyoujia.cn/
 
 ### 单独启动 vue admin
-
 
 ```shell
     yarn  serve:dev
 ```
+
 or
+
 ```shell
     npm run serve:dev
 ```
 
-多环境命令查看package.json  script:
+多环境命令查看 package.json script:
 
-``` shell
+```shell
     "serve:dev": "cross-env NODE_ENV=development dotenv -e .env.dev.serve vue-cli-service serve",
     "build:dev": "cross-env NODE_ENV=production  dotenv -e .env.dev.build vue-cli-service build",
     "serve:test": "cross-env NODE_ENV=development dotenv -e .env.test.serve vue-cli-service serve",
@@ -240,17 +170,17 @@ or
     "build:prod": "cross-env NODE_ENV=production  dotenv -e .env.prod.build vue-cli-service build",
 ```
 
-
 ### eslint
 
 ```shell
     yarn  lint
 ```
+
 or
+
 ```shell
     npm run lint
 ```
-
 
 提交自动检测：
 
@@ -271,6 +201,5 @@ or
 Modern browsers and Internet Explorer 10+.
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Safari |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| IE10, IE11, Edge                                             | last 3 versions                                              | last 3 versions                                              | last 3 versions                                              |
-
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IE10, IE11, Edge                                                                                                                                                                                                 | last 3 versions                                                                                                                                                                                                    | last 3 versions                                                                                                                                                                                                | last 3 versions                                                                                                                                                                                                |
