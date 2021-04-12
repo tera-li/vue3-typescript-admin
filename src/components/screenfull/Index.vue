@@ -1,26 +1,12 @@
 <template>
   <div id="screenfull">
-    <div
-      v-if="isFullscreen"
-      @click="click"
-    >
-      <svg
-        class="icon"
-        aria-hidden="true"
-        font-size="20px"
-      >
+    <div v-if="isFullscreen" @click="click">
+      <svg class="icon" aria-hidden="true" font-size="20px">
         <use xlink:href="#iconexitfullscreen" />
       </svg>
     </div>
-    <div
-      @click="click"
-      v-else
-    >
-      <svg
-        class="icon"
-        aria-hidden="true"
-        font-size="20px"
-      >
+    <div @click="click" v-else>
+      <svg class="icon" aria-hidden="true" font-size="20px">
         <use xlink:href="#iconfullscreen" />
       </svg>
     </div>
@@ -29,7 +15,13 @@
 
 <script lang="ts">
 import screenfull from 'screenfull'
-import { defineComponent, onBeforeUnmount, onMounted, reactive, toRefs } from 'vue'
+import {
+  defineComponent,
+  onBeforeUnmount,
+  onMounted,
+  reactive,
+  toRefs
+} from 'vue'
 import { ElMessage } from 'element-plus'
 
 const sf = screenfull
@@ -70,5 +62,4 @@ export default defineComponent({
     }
   }
 })
-
 </script>

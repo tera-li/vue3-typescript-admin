@@ -1,21 +1,21 @@
 // 布局枚举
-enum Layout{
-    Horizontal,
-    Vertical,
-    Gallery,
-    Comprehensive,
-    Common
+enum Layout {
+  Horizontal,
+  Vertical,
+  Gallery,
+  Comprehensive,
+  Common
 }
 // 主题分类
-enum ThemeName{
-    Default,
-    Ocean,
-    Green,
-    Glory,
-    White
+enum ThemeName {
+  Default,
+  Ocean,
+  Green,
+  Glory,
+  White
 }
 
-export interface Theme{
+export interface Theme {
   // 布局种类 horizontal vertical gallery comprehensive common
   layout?: Layout
   // 主题名称 default ocean green glory white

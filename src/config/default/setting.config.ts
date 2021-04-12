@@ -1,8 +1,14 @@
-import { Language, Environment, RouterSource, RouterMode, TokenStorageName } from '@/constant/settings'
+import {
+  Language,
+  Environment,
+  RouterSource,
+  RouterMode,
+  TokenStorageName
+} from '@/constant/settings'
 
-export interface Settings{
+export interface Settings {
   //项目中页面显示的名称
-  title:string
+  title: string
   //基础url
   baseURL?: string
   // pro版本copyright可随意修改
@@ -46,13 +52,13 @@ export interface Settings{
   // 代码生成机生成在view下的文件夹名称
   templateFolder?: string
   // 画廊布局和综合布局时，是否点击一级菜单默认开启第一个二级菜单
-  openFirstMenu?: boolean,
+  openFirstMenu?: boolean
   version: string
 }
 
 const settings: Settings = {
   //项目中页面显示的名称
-  title:'Vue3管理后台',
+  title: 'Vue3管理后台',
   //基础url
   baseURL: process.env.VUE_APP_BASE_API,
   // pro版本copyright可随意修改

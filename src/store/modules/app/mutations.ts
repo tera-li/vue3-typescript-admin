@@ -9,11 +9,13 @@ export type Mutations<S = AppState> = {
   [AppMutationTypes.TOGGLE_DEVICE](state: S, device: DeviceType): void
   [AppMutationTypes.SET_LANGUAGE](state: S, language: string): void
   [AppMutationTypes.SET_SIZE](state: S, size: string): void
-
 }
 
 export const mutations: MutationTree<AppState> & Mutations = {
-  [AppMutationTypes.TOGGLE_SIDEBAR](state: AppState, withoutAnimation: boolean) {
+  [AppMutationTypes.TOGGLE_SIDEBAR](
+    state: AppState,
+    withoutAnimation: boolean
+  ) {
     state.sidebar.opened = !state.sidebar.opened
     state.sidebar.withoutAnimation = withoutAnimation
     if (state.sidebar.opened) {
@@ -42,5 +44,4 @@ export const mutations: MutationTree<AppState> & Mutations = {
     state.size = size
     setSize(state.size)
   }
-
 }

@@ -8,41 +8,29 @@
       <div class="drawer-item">
         <span>{{ t('settings.theme') }}</span>
         <ThemePicker
-          style="float: right;height: 26px;margin: -3px 8px 0 0;"
+          style="float: right; height: 26px; margin: -3px 8px 0 0"
           @change="themeChange"
         />
       </div>
 
       <div class="drawer-item">
         <span>{{ t('settings.showTagsView') }}</span>
-        <el-switch
-          v-model="showTagsView"
-          class="drawer-switch"
-        />
+        <el-switch v-model="showTagsView" class="drawer-switch" />
       </div>
 
       <div class="drawer-item">
         <span>{{ t('settings.showSidebarLogo') }}</span>
-        <el-switch
-          v-model="showSidebarLogo"
-          class="drawer-switch"
-        />
+        <el-switch v-model="showSidebarLogo" class="drawer-switch" />
       </div>
 
       <div class="drawer-item">
         <span>{{ t('settings.fixedHeader') }}</span>
-        <el-switch
-          v-model="fixedHeader"
-          class="drawer-switch"
-        />
+        <el-switch v-model="fixedHeader" class="drawer-switch" />
       </div>
 
       <div class="drawer-item">
         <span>{{ t('settings.sidebarTextTheme') }}</span>
-        <el-switch
-          v-model="sidebarTextTheme"
-          class="drawer-switch"
-        />
+        <el-switch v-model="sidebarTextTheme" class="drawer-switch" />
       </div>
     </div>
   </div>
@@ -68,27 +56,54 @@ export default defineComponent({
       showSidebarLogo: store.state.settings.showSidebarLogo,
       sidebarTextTheme: store.state.settings.sidebarTextTheme,
       themeChange: (value: string) => {
-        store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'theme', value })
+        store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, {
+          key: 'theme',
+          value
+        })
       }
     })
 
-    watch(() => state.fixedHeader, (value) => {
-      store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'fixedHeader', value })
-    })
+    watch(
+      () => state.fixedHeader,
+      (value) => {
+        store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, {
+          key: 'fixedHeader',
+          value
+        })
+      }
+    )
 
-    watch(() => state.showTagsView, (value) => {
-      store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'showTagsView', value })
-    })
+    watch(
+      () => state.showTagsView,
+      (value) => {
+        store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, {
+          key: 'showTagsView',
+          value
+        })
+      }
+    )
 
-    watch(() => state.showSidebarLogo, (value) => {
-      console.log(value)
+    watch(
+      () => state.showSidebarLogo,
+      (value) => {
+        console.log(value)
 
-      store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'showSidebarLogo', value })
-    })
+        store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, {
+          key: 'showSidebarLogo',
+          value
+        })
+      }
+    )
 
-    watch(() => state.sidebarTextTheme, (value) => {
-      store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'sidebarTextTheme', value })
-    })
+    watch(
+      () => state.sidebarTextTheme,
+      (value) => {
+        store.dispatch(SettingsActionTypes.ACTION_CHANGE_SETTING, {
+          key: 'sidebarTextTheme',
+          value
+        })
+      }
+    )
 
     return {
       t,
@@ -107,19 +122,19 @@ export default defineComponent({
 
   .drawer-title {
     margin-bottom: 12px;
-    color: rgba(0, 0, 0, .85);
+    color: rgba(0, 0, 0, 0.85);
     font-size: 14px;
     line-height: 22px;
   }
 
   .drawer-item {
-    color: rgba(0, 0, 0, .65);
+    color: rgba(0, 0, 0, 0.65);
     font-size: 14px;
     padding: 12px 0;
   }
 
   .drawer-switch {
-    float: right
+    float: right;
   }
 }
 </style>

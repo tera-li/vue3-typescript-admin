@@ -1,5 +1,13 @@
 [*.{js,jsx,ts,tsx,vue}]
+# 设置字符集
+charset = utf-8
+# 缩进风格
 indent_style = space
+# 缩进空格
 indent_size = 2
-trim_trailing_whitespace = true
+# 结尾换行
+end_of_line = crlf
+# 文件末尾换行符
 insert_final_newline = true
+# 删除代码前后空格
+trim_trailing_whitespace = true

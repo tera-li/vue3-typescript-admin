@@ -1,11 +1,11 @@
 import { ContentType, Device } from '@/constant/headers'
 import { InfoShowType } from '@/constant/network'
-import settings from "./setting.config";
-interface Headers{
-    token: string
-    contentType: string
-    version: string
-    device: Device
+import settings from './setting.config'
+interface Headers {
+  token: string
+  contentType: string
+  version: string
+  device: Device
 }
 
 const _header: Headers = {
@@ -15,12 +15,12 @@ const _header: Headers = {
   device: Device.PC
 }
 
-export interface NetworkConfig{
-    host?: string
-    timeout?: number
-    loading?: false
-    errorShowType?: InfoShowType
-    header?: {}
+export interface NetworkConfig {
+  host?: string
+  timeout?: number
+  loading?: false
+  errorShowType?: InfoShowType
+  header?: {}
 }
 
 const networkConfig: NetworkConfig = {

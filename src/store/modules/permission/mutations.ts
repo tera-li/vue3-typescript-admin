@@ -10,9 +10,11 @@ export type Mutations<S = PermissionState> = {
 }
 
 export const mutations: MutationTree<PermissionState> & Mutations = {
-  [PermissionMutationType.SET_ROUTES](state: PermissionState, routes: RouteRecordRaw[]) {
+  [PermissionMutationType.SET_ROUTES](
+    state: PermissionState,
+    routes: RouteRecordRaw[]
+  ) {
     state.routes = constantRoutes.concat(routes)
     state.dynamicRoutes = markRaw(routes)
   }
-
 }

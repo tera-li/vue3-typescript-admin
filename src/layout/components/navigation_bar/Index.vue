@@ -6,10 +6,7 @@
       class="hamburger-container"
       @toggle-click="toggleSideBar"
     />
-    <BreadCrumb
-      id="breadcrumb-container"
-      class="breadcrumb-container"
-    />
+    <BreadCrumb id="breadcrumb-container" class="breadcrumb-container" />
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
         <ScreenFull class="right-menu-item hover-effect" />
@@ -20,21 +17,18 @@
         trigger="click"
       >
         <div class="avatar-wrapper">
-          <img
-            :src="avatar + '?imageView2/1/w/80/h/80'"
-            class="user-avatar"
-          >
+          <img :src="avatar + '?imageView2/1/w/80/h/80'" class="user-avatar" />
         </div>
         <template #dropdown>
           <el-dropdown-menu>
             <router-link to="/profile/">
               <el-dropdown-item>
-                {{ t("navbar.profile") }}
+                {{ t('navbar.profile') }}
               </el-dropdown-item>
             </router-link>
             <router-link to="/">
               <el-dropdown-item>
-                {{ t("navbar.dashboard") }}
+                {{ t('navbar.dashboard') }}
               </el-dropdown-item>
             </router-link>
             <a
@@ -42,7 +36,7 @@
               href="https://github.com/rcyj-FED/vue3-composition-admin"
             >
               <el-dropdown-item>
-                {{ t("navbar.github") }}
+                {{ t('navbar.github') }}
               </el-dropdown-item>
             </a>
             <a
@@ -51,12 +45,9 @@
             >
               <el-dropdown-item>Docs</el-dropdown-item>
             </a>
-            <el-dropdown-item
-              divided
-              @click="logout"
-            >
-              <span style="display:block;">
-                {{ t("navbar.logOut") }}
+            <el-dropdown-item divided @click="logout">
+              <span style="display: block">
+                {{ t('navbar.logOut') }}
               </span>
             </el-dropdown-item>
           </el-dropdown-menu>

@@ -6,10 +6,7 @@
  * @LastEditTime: 2021-01-25 13:29:33
 -->
 <template>
-  <div
-    :style="{height: height, zIndex: zIndex}"
-    class="sticky"
-  >
+  <div :style="{ height: height, zIndex: zIndex }" class="sticky">
     <div
       :class="className"
       :style="{
@@ -114,7 +111,11 @@ export default defineComponent({
 
     const handleResize = () => {
       if (state.isSticky) {
-        state.width = document.querySelector('.sticky')?.getBoundingClientRect().width.toString() + 'px'
+        state.width =
+          document
+            .querySelector('.sticky')
+            ?.getBoundingClientRect()
+            .width.toString() + 'px'
       }
     }
 

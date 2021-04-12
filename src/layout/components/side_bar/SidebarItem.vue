@@ -1,16 +1,21 @@
 <template>
   <div
     v-if="!item.meta || !item.meta.hidden"
-    :class="[isCollapse ? 'simple-mode' : 'full-mode', {'first-level': isFirstLevel}]"
+    :class="[
+      isCollapse ? 'simple-mode' : 'full-mode',
+      { 'first-level': isFirstLevel }
+    ]"
   >
-    <template v-if="!alwaysShowRootMenu && theOnlyOneChild && !theOnlyOneChild.children">
+    <template
+      v-if="!alwaysShowRootMenu && theOnlyOneChild && !theOnlyOneChild.children"
+    >
       <SidebarItemLink
         v-if="theOnlyOneChild.meta"
         :to="resolvePath(theOnlyOneChild.path)"
       >
         <el-menu-item
           :index="resolvePath(theOnlyOneChild.path)"
-          :class="{'submenu-title-noDropdown': isFirstLevel}"
+          :class="{ 'submenu-title-noDropdown': isFirstLevel }"
         >
           <svg
             v-if="theOnlyOneChild.meta.icon"
@@ -20,17 +25,13 @@
           >
             <use :xlink:href="theOnlyOneChild.meta.icon" />
           </svg>
-          <span
-            v-if="theOnlyOneChild.meta.title"
-          >{{ t('route.' + theOnlyOneChild.meta.title) }}</span>
+          <span v-if="theOnlyOneChild.meta.title">
+            {{ t('route.' + theOnlyOneChild.meta.title) }}
+          </span>
         </el-menu-item>
       </SidebarItemLink>
     </template>
-    <el-submenu
-      v-else
-      :index="resolvePath(item.path)"
-      popper-append-to-body
-    >
+    <el-submenu v-else :index="resolvePath(item.path)" popper-append-to-body>
       <template #title>
         <svg
           v-if="item.meta && item.meta.icon"
@@ -40,9 +41,9 @@
         >
           <use :xlink:href="item.meta.icon" />
         </svg>
-        <span
-          v-if="item.meta && item.meta.title"
-        >{{ t('route.' +item.meta.title) }}</span>
+        <span v-if="item.meta && item.meta.title">
+          {{ t('route.' + item.meta.title) }}
+        </span>
       </template>
       <template v-if="item.children">
         <sidebar-item
@@ -139,7 +140,6 @@ export default defineComponent({
     }
   }
 })
-
 </script>
 
 <style lang="scss" scoped>
@@ -148,7 +148,7 @@ export default defineComponent({
 }
 
 .full-mode {
-  .nest-menu .el-submenu>.el-submenu__title,
+  .nest-menu .el-submenu > .el-submenu__title,
   .el-submenu .el-menu-item {
     min-width: $sideBarWidth !important;
     background-color: $subMenuBg !important;
@@ -173,14 +173,14 @@ export default defineComponent({
     .el-submenu {
       overflow: hidden;
 
-      &>.el-submenu__title {
+      & > .el-submenu__title {
         padding: 0px !important;
 
         .el-submenu__icon-arrow {
           display: none;
         }
 
-        &>span {
+        & > span {
           visibility: hidden;
         }
       }

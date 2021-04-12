@@ -3,7 +3,7 @@ import { getLocale } from '@/locales'
 
 export enum DeviceType {
   Mobile,
-  Desktop,
+  Desktop
 }
 
 export interface AppState {

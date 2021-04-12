@@ -15,7 +15,10 @@ const permissionRouter: Array<RouteRecordRaw> = [
     children: [
       {
         path: 'page',
-        component: () => import(/* webpackChunkName: "permission-page" */ '@/views/permission/Page.vue'),
+        component: () =>
+          import(
+            /* webpackChunkName: "permission-page" */ '@/views/permission/Page.vue'
+          ),
         name: 'PagePermission',
         meta: {
           title: 'pagePermission',
@@ -24,7 +27,10 @@ const permissionRouter: Array<RouteRecordRaw> = [
       },
       {
         path: 'directive',
-        component: () => import(/* webpackChunkName: "permission-directive" */ '@/views/permission/Directive.vue'),
+        component: () =>
+          import(
+            /* webpackChunkName: "permission-directive" */ '@/views/permission/Directive.vue'
+          ),
         name: 'DirectivePermission',
         meta: {
           title: 'directivePermission'
@@ -33,7 +39,10 @@ const permissionRouter: Array<RouteRecordRaw> = [
       },
       {
         path: 'role',
-        component: () => import(/* webpackChunkName: "permission-role" */ '@/views/permission/role/Role.vue'),
+        component: () =>
+          import(
+            /* webpackChunkName: "permission-role" */ '@/views/permission/role/Role.vue'
+          ),
         name: 'RolePermission',
         meta: {
           title: 'rolePermission',

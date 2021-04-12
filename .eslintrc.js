@@ -23,7 +23,9 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/member-delimiter-style': ['error',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
       {
         multiline: {
           delimiter: 'none'
@@ -31,9 +33,10 @@ module.exports = {
         singleline: {
           delimiter: 'comma'
         }
-      }],
+      }
+    ],
     '@typescript-eslint/no-explicit-any': 'off',
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': 'off',
     'vue/array-bracket-spacing': 'error',
     'vue/arrow-spacing': 'error',
     'vue/block-spacing': 'error',
@@ -44,7 +47,7 @@ module.exports = {
     'vue/eqeqeq': 'error',
     'vue/key-spacing': 'error',
     'vue/match-component-file-name': 'error',
-    'vue/object-curly-spacing': 'error',
+    'vue/object-curly-spacing': 'off',
     'no-useless-escape': 'off',
     '@typescript-eslint/no-this-alias': [
       'error',
@@ -54,7 +57,29 @@ module.exports = {
       }
     ],
     'vue/attribute-hyphenation': 'off',
-    'vue/custom-event-name-casing': 'off'
+    'vue/custom-event-name-casing': 'off',
+    'vue/max-attributes-per-line': [
+      2,
+      {
+        singleline: 10,
+        multiline: {
+          max: 1,
+          allowFirstLine: false
+        }
+      }
+    ],
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'any',
+          normal: 'any',
+          component: 'any'
+        },
+        svg: 'always',
+        math: 'always'
+      }
+    ]
   },
   overrides: [
     {

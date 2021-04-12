@@ -10,7 +10,8 @@ const ProfileRouter: Array<RouteRecordRaw> = [
     children: [
       {
         path: 'index',
-        component: () => import(/* webpackChunkName: "profile" */ '@/views/profile/Index.vue'),
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '@/views/profile/Index.vue'),
         name: 'Profile',
         meta: {
           title: 'profile',

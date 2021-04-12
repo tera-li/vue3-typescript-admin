@@ -23,7 +23,10 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: () => import(/* webpackChunkName: "redirect" */ '@/views/redirect/Index.vue')
+        component: () =>
+          import(
+            /* webpackChunkName: "redirect" */ '@/views/redirect/Index.vue'
+          )
       }
     ]
   },
@@ -34,7 +37,10 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     children: [
       {
         path: 'dashboard',
-        component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/Index.vue'),
+        component: () =>
+          import(
+            /* webpackChunkName: "dashboard" */ '@/views/dashboard/Index.vue'
+          ),
         name: 'Dashboard',
         meta: {
           title: 'dashboard',
@@ -47,16 +53,14 @@ export const constantRoutes: Array<RouteRecordRaw> = [
   ...constantModules
 ]
 
-export const asyncRoutes: Array<RouteRecordRaw> = [
-  ...permissionModules
-]
+export const asyncRoutes: Array<RouteRecordRaw> = [...permissionModules]
 const router = createRouter({
   history: createWebHashHistory(),
   routes: constantRoutes
 })
 
 export function resetRouter() {
-  (router as any).matcher = (router as any).matcher // reset router
+  ;(router as any).matcher = (router as any).matcher // reset router
 }
 
 export default router

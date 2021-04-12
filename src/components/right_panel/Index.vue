@@ -1,17 +1,12 @@
 <template>
   <div
     class="handle-button"
-    :style="{'top': buttonTop+'px','background-color': theme}"
-    @click="show= true"
+    :style="{ top: buttonTop + 'px', 'background-color': theme }"
+    @click="show = true"
   >
     <i class="el-icon-setting" />
   </div>
-  <el-drawer
-    title="设置"
-    v-model="show"
-    size="300px"
-    destroy-on-close
-  >
+  <el-drawer title="设置" v-model="show" size="300px" destroy-on-close>
     <slot />
   </el-drawer>
 </template>
@@ -41,7 +36,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-
 .handle-button {
   width: 48px;
   height: 48px;

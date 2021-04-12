@@ -9,7 +9,8 @@ const ThemeRouter: Array<RouteRecordRaw> = [
     children: [
       {
         path: 'theme',
-        component: () => import(/* webpackChunkName: "theme" */ '@/views/theme/Index.vue'),
+        component: () =>
+          import(/* webpackChunkName: "theme" */ '@/views/theme/Index.vue'),
         name: 'Theme',
         meta: {
           title: 'theme',

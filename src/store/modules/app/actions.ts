@@ -9,7 +9,7 @@ import { AppActionTypes } from './action-types'
 type AugmentedActionContext = {
   commit<K extends keyof Mutations>(
     key: K,
-    payload: Parameters<Mutations[K]>[1],
+    payload: Parameters<Mutations[K]>[1]
   ): ReturnType<Mutations[K]>
 } & Omit<ActionContext<AppState, RootState>, 'commit'>
 
@@ -37,7 +37,10 @@ export interface Actions {
 }
 
 export const actions: ActionTree<AppState, RootState> & Actions = {
-  [AppActionTypes.ACTION_TOGGLE_SIDEBAR]({ commit }, withoutAnimation: boolean) {
+  [AppActionTypes.ACTION_TOGGLE_SIDEBAR](
+    { commit },
+    withoutAnimation: boolean
+  ) {
     commit(AppMutationTypes.TOGGLE_SIDEBAR, withoutAnimation)
   },
   [AppActionTypes.ACTION_CLOSE_SIDEBAR]({ commit }, withoutAnimation: boolean) {

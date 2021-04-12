@@ -3,7 +3,9 @@ import { Directive } from 'vue'
 export const elDraggableDialog: Directive = {
   beforeMount(el, _, vnode) {
     const dragDom = document.querySelector('.el-dialog') as HTMLElement
-    const dialogHeaderEl = document.querySelector('.el-dialog__header') as HTMLElement
+    const dialogHeaderEl = document.querySelector(
+      '.el-dialog__header'
+    ) as HTMLElement
     dragDom.style.backgroundColor = '#eeeeee'
     dragDom.style.cssText += ';top:0px;'
     dialogHeaderEl.style.cssText += ';cursor:move'
@@ -31,8 +33,10 @@ export const elDraggableDialog: Directive = {
 
       // Format may be "##%" or "##px"
       if (styleLeftStr.includes('%')) {
-        styleLeft = +document.body.clientWidth * (+styleLeftStr.replace(/%/g, '') / 100)
-        styleTop = +document.body.clientHeight * (+styleTopStr.replace(/%/g, '') / 100)
+        styleLeft =
+          +document.body.clientWidth * (+styleLeftStr.replace(/%/g, '') / 100)
+        styleTop =
+          +document.body.clientHeight * (+styleTopStr.replace(/%/g, '') / 100)
       } else {
         styleLeft = +styleLeftStr.replace(/px/g, '')
         styleTop = +styleTopStr.replace(/px/g, '')
@@ -43,19 +47,21 @@ export const elDraggableDialog: Directive = {
         let top = e.clientY - disY
 
         // Handle edge cases
-        if (-(left) > minDragDomLeft) {
+        if (-left > minDragDomLeft) {
           left = -minDragDomLeft
         } else if (left > maxDragDomLeft) {
           left = maxDragDomLeft
         }
-        if (-(top) > minDragDomTop) {
+        if (-top > minDragDomTop) {
           top = -minDragDomTop
         } else if (top > maxDragDomTop) {
           top = maxDragDomTop
         }
 
         // Move current element
-        dragDom.style.cssText += `;left:${left + styleLeft}px;top:${top + styleTop}px;`
+        dragDom.style.cssText += `;left:${left + styleLeft}px;top:${
+          top + styleTop
+        }px;`
 
         // Emit on-dialog-drag event
         // See https://stackoverflow.com/questions/49264426/vuejs-custom-directive-emit-event

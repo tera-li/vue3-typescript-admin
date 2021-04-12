@@ -1,5 +1,5 @@
-export enum InfoShowType{
-     LOG,
-     NOTIFICATION,
-     TOAST
- }
+export enum InfoShowType {
+  LOG,
+  NOTIFICATION,
+  TOAST
+}

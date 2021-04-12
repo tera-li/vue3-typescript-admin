@@ -6,15 +6,9 @@
  * @LastEditTime: 2021-01-18 15:20:02
 -->
 <template>
-  <div style="padding:30px;">
-    <el-alert
-      :closable="false"
-      title="menu 1"
-    >
-      <transition
-        name="fade-transform"
-        mode="out-in"
-      >
+  <div style="padding: 30px">
+    <el-alert :closable="false" title="menu 1">
+      <transition name="fade-transform" mode="out-in">
         <router-view />
       </transition>
     </el-alert>
@@ -24,7 +18,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-export default defineComponent({
-
-})
+export default defineComponent({})
 </script>

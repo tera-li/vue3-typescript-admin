@@ -4,7 +4,6 @@ import { SettingsMutationTypes } from './mutation-types'
 
 export type Mutations<S = SettingsState> = {
   [SettingsMutationTypes.CHANGE_SETTING](state: S, payload: { key: string, value: any }): void
-
 }
 
 export const mutations: MutationTree<SettingsState> & Mutations = {

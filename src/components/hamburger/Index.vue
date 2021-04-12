@@ -1,13 +1,6 @@
 <template>
-  <div
-    :class="[{'is-active': isActive}]"
-    @click="toggleClick"
-  >
-    <svg
-      class="icon"
-      aria-hidden="true"
-      font-size="20px"
-    >
+  <div :class="[{ 'is-active': isActive }]" @click="toggleClick">
+    <svg class="icon" aria-hidden="true" font-size="20px">
       <use xlink:href="#iconhamburger" />
     </svg>
   </div>

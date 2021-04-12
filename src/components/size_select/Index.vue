@@ -1,16 +1,8 @@
 <template>
   <div>
-    <el-dropdown
-      id="size-select"
-      trigger="click"
-      @command="handleSetSize"
-    >
+    <el-dropdown id="size-select" trigger="click" @command="handleSetSize">
       <div>
-        <svg
-          class="icon"
-          aria-hidden="true"
-          font-size="20px"
-        >
+        <svg class="icon" aria-hidden="true" font-size="20px">
           <use xlink:href="#iconsize" />
         </svg>
       </div>
@@ -19,11 +11,10 @@
           <el-dropdown-item
             v-for="item of sizeOptions"
             :key="item.value"
-            :disabled="size===item.value"
+            :disabled="size === item.value"
             :command="item.value"
           >
-            {{
-              item.label }}
+            {{ item.label }}
           </el-dropdown-item>
         </el-dropdown-menu>
       </template>
@@ -45,7 +36,10 @@ export default defineComponent({
     const { fullPath } = useRoute()
     const router = useRouter()
     function refreshView() {
-      useStore().dispatch(TagsActionTypes.ACTION_DEL_ALL_CACHED_VIEWS, undefined)
+      useStore().dispatch(
+        TagsActionTypes.ACTION_DEL_ALL_CACHED_VIEWS,
+        undefined
+      )
       nextTick(() => {
         router.replace({ path: '/redirect' + fullPath }).catch((err) => {
           console.warn(err)
