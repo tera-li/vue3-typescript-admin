@@ -96,7 +96,7 @@ export default {
       },
       logout: () => {
         useStore().dispatch(UserActionTypes.ACTION_LOGIN_OUT)
-        router.push(`/login?redirect=${route.fullPath}`).catch(err => {
+        router.push(`/login?redirect=${route.fullPath}`).catch((err) => {
           console.warn(err)
         })
       }
