@@ -15,7 +15,7 @@ export default defineComponent({
   setup() {
     const router = useRouter()
     const handleRolesChange = () => {
-      router.push({ path: '/?' + +new Date() }).catch(err => {
+      router.push({ path: '/?' + +new Date() }).catch((err) => {
         console.warn(err)
       })
     }

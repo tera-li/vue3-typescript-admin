@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="margin-bottom:15px;">
+    <div style="margin-bottom: 15px">
       {{ t('permission.roles') }}： {{ roles }}
     </div>
     {{ t('permission.switchRoles') }}：

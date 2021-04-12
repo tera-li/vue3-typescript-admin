@@ -2,12 +2,12 @@
   <div class="dashboard-editor-container">
     <el-row :gutter="8">
       <el-col
-        :xs="{span: 24}"
-        :sm="{span: 24}"
-        :md="{span: 24}"
-        :lg="{span: 16}"
-        :xl="{span: 16}"
-        style="padding-right:8px;margin-bottom:30px;"
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 16 }"
+        :xl="{ span: 16 }"
+        style="padding-right: 8px; margin-bottom: 30px"
       >
         <DependsTable />
       </el-col>
@@ -61,7 +61,7 @@ export default {
   background-color: rgb(240, 242, 245);
   position: relative;
 
-  .github-corner{
+  .github-corner {
     position: absolute;
     top: 0px;
     border: 0;
@@ -75,7 +75,7 @@ export default {
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .chart-wrapper {
     padding: 8px;
   }

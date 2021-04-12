@@ -1,75 +1,54 @@
 <template>
-  <el-card
-    class="card"
-    shadow="never"
-  >
+  <el-card class="card" shadow="never">
     <div>
       <span>依赖信息</span>
-      <div style="float: right">
-        部署时间:{{ updateTime }}
-      </div>
+      <div style="float: right">部署时间:{{ updateTime }}</div>
     </div>
 
     <div class="bottom-btn">
-      <a
-        target="_blank"
-        href="https://github.com/vuejs/vue-next"
-      >
-        <el-button type="success">
-          vue3.x
-        </el-button>
+      <a target="_blank" href="https://github.com/vuejs/vue-next">
+        <el-button type="success">vue3.x</el-button>
       </a>
-      <a
-        target="_blank"
-        href="https://element-plus.gitee.io/#/zh-CN"
-      >
-        <el-button type="primary">
-          element-plus
-        </el-button>
+      <a target="_blank" href="https://element-plus.gitee.io/#/zh-CN">
+        <el-button type="primary">element-plus</el-button>
       </a>
-      <a
-        target="_blank"
-        href="https://github.com/intlify/vue-i18n-next"
-      >
+      <a target="_blank" href="https://github.com/intlify/vue-i18n-next">
         <el-button type="warning">vue-i18n-next</el-button>
       </a>
-      <a
-        target="_blank"
-        href="https://www.tslang.cn/docs/home.html"
-      >
+      <a target="_blank" href="https://www.tslang.cn/docs/home.html">
         <el-button type="primary">ts-3.9.3</el-button>
       </a>
     </div>
     <table class="table">
       <tr>
         <td>@vue/cli版本</td>
-        <td>{{ devDependencies["@vue/cli-service"] }}</td>
+        <td>{{ devDependencies['@vue/cli-service'] }}</td>
         <td>vue版本</td>
-        <td>{{ dependencies["vue"] }}</td>
+        <td>{{ dependencies['vue'] }}</td>
       </tr>
       <tr>
         <td>vue-router版本</td>
-        <td>{{ dependencies["vue-router"] }}</td>
+        <td>{{ dependencies['vue-router'] }}</td>
         <td>vuex版本</td>
-        <td>{{ dependencies["vuex"] }}</td>
+        <td>{{ dependencies['vuex'] }}</td>
       </tr>
       <tr>
         <td>lodash版本</td>
-        <td>{{ dependencies["lodash"] }}</td>
+        <td>{{ dependencies['lodash'] }}</td>
         <td>normalize版本</td>
-        <td>{{ dependencies["normalize.css"] }}</td>
+        <td>{{ dependencies['normalize.css'] }}</td>
       </tr>
       <tr>
         <td>dotenv-cli版本</td>
-        <td>{{ devDependencies["dotenv-cli"] }}</td>
+        <td>{{ devDependencies['dotenv-cli'] }}</td>
         <td>style-resources-loader版本</td>
-        <td>{{ devDependencies["style-resources-loader"] }}</td>
+        <td>{{ devDependencies['style-resources-loader'] }}</td>
       </tr>
       <tr>
         <td>eslint版本</td>
-        <td>{{ devDependencies["eslint"] }}</td>
+        <td>{{ devDependencies['eslint'] }}</td>
         <td>sass版本</td>
-        <td>{{ devDependencies["sass"] }}</td>
+        <td>{{ devDependencies['sass'] }}</td>
       </tr>
     </table>
   </el-card>

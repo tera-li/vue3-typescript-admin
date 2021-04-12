@@ -1,10 +1,3 @@
-/*
- * @Description:
- * @Autor: ZY
- * @Date: 2020-12-07 10:30:20
- * @LastEditors: ZY
- * @LastEditTime: 2020-12-07 11:00:37
- */
 module.exports = {
   root: true,
   env: {
@@ -79,7 +72,9 @@ module.exports = {
         svg: 'always',
         math: 'always'
       }
-    ]
+    ],
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/html-indent': 'off'
   },
   overrides: [
     {

@@ -1,37 +1,20 @@
 <template>
   <div class="social-signup-container">
-    <div
-      class="sign-btn"
-      @click="wechatHandleClick('wechat')"
-    >
+    <div class="sign-btn" @click="wechatHandleClick('wechat')">
       <span class="wx-svg-container">
-        <svg
-          class="icon"
-          aria-hidden="true"
-        >
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="#iconwechat" />
         </svg>
-
       </span>
-      <span>
-        微信
-      </span>
+      <span>微信</span>
     </div>
-    <div
-      class="sign-btn"
-      @click="tencentHandleClick('tencent')"
-    >
+    <div class="sign-btn" @click="tencentHandleClick('tencent')">
       <span class="qq-svg-container">
-        <svg
-          class="icon"
-          aria-hidden="true"
-        >
+        <svg class="icon" aria-hidden="true">
           <use xlink:href="#iconalipay" />
         </svg>
       </span>
-      <span>
-        支付宝
-      </span>
+      <span>支付宝</span>
     </div>
   </div>
 </template>
@@ -98,7 +81,7 @@ export default defineComponent({
   }
 
   .qq-svg-container {
-    background-color: #027AFF;
+    background-color: #027aff;
     margin-left: 50px;
   }
 }

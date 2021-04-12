@@ -1,25 +1,17 @@
-/*
- * @Description:全局存储类封装（AES加解密）
- * @Autor: ZY
- * @Date: 2020-11-04 11:51:01
- * @LastEditors: ZY
- * @LastEditTime: 2020-12-28 16:57:57
- */
-
 import VAES from './ase'
 import Cookies from 'js-cookie'
 
-export enum StorageType{
-    local,
-    session,
-    cookie
+export enum StorageType {
+  local,
+  session,
+  cookie
 }
 
-interface VStorageInterface{
-    rcSetItem<T>(type: StorageType, key: string, value: T): void
-    rcGetItem(type: StorageType, key: string): string | null
-    rcRemoveItem(type: StorageType, key: string): void
- }
+interface VStorageInterface {
+  rcSetItem<T>(type: StorageType, key: string, value: T): void
+  rcGetItem(type: StorageType, key: string): string | null
+  rcRemoveItem(type: StorageType, key: string): void
+}
 
 class VStorage implements VStorageInterface {
   private static instance: VStorage

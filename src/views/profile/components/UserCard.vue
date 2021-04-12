@@ -1,16 +1,7 @@
-<!--
- * @Description:
- * @Autor: scy😊
- * @Date: 2021-01-23 11:03:44
- * @LastEditors: scy😊
- * @LastEditTime: 2021-01-23 11:03:44
--->
 <template>
-  <el-card style="margin-bottom:20px;">
+  <el-card style="margin-bottom: 20px">
     <template #header>
-      <div
-        class="clearfix"
-      >
+      <div class="clearfix">
         <span>About me</span>
       </div>
     </template>
@@ -40,7 +31,8 @@
     <div class="user-bio">
       <div class="user-education user-bio-section">
         <div class="user-bio-section-header">
-          <svg-icon name="education" /><span>Education</span>
+          <svg-icon name="education" />
+          <span>Education</span>
         </div>
         <div class="user-bio-section-body">
           <div class="text-muted">
@@ -51,7 +43,8 @@
 
       <div class="user-skills user-bio-section">
         <div class="user-bio-section-header">
-          <svg-icon name="skill" /><span>Skills</span>
+          <svg-icon name="skill" />
+          <span>Skills</span>
         </div>
         <div class="user-bio-section-body">
           <div class="progress-item">
@@ -68,10 +61,7 @@
           </div>
           <div class="progress-item">
             <span>ESLint</span>
-            <el-progress
-              :percentage="100"
-              status="success"
-            />
+            <el-progress :percentage="100" status="success" />
           </div>
         </div>
       </div>

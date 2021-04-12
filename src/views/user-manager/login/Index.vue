@@ -6,7 +6,7 @@
       autoplay
       muted
     >
-      <source src="../../../assets/images/login/night.mp4">
+      <source src="../../../assets/images/login/night.mp4" />
     </video>
 
     <el-form
@@ -19,12 +19,9 @@
     >
       <div class="title-container">
         <h3 class="title">
-          {{ t("login.title") }}
+          {{ t('login.title') }}
         </h3>
-        <LangSelect
-          :isWhite="true"
-          class="set-language"
-        />
+        <LangSelect :isWhite="true" class="set-language" />
       </div>
 
       <el-form-item prop="username">
@@ -65,10 +62,7 @@
             @blur="capsTooltip = false"
             @keyup.enter="handleLogin"
           />
-          <span
-            class="show-pwd"
-            @click="showPwd"
-          >
+          <span class="show-pwd" @click="showPwd">
             <svg-icon
               :name="passwordType === 'password' ? 'eye-off' : 'eye-on'"
             />
@@ -79,20 +73,20 @@
       <el-button
         :loading="loading"
         type="primary"
-        style="width:100%; margin-bottom:30px;"
+        style="width: 100%; margin-bottom: 30px"
         @click.prevent="handleLogin"
       >
-        {{ t("login.logIn") }}
+        {{ t('login.logIn') }}
       </el-button>
 
-      <div style="position:relative">
+      <div style="position: relative">
         <div class="tips">
-          <span>{{ t("login.username") }} : admin </span>
-          <span>{{ t("login.password") }} : {{ t("login.any") }} </span>
+          <span>{{ t('login.username') }} : admin</span>
+          <span>{{ t('login.password') }} : {{ t('login.any') }}</span>
         </div>
         <div class="tips">
-          <span>{{ t("login.username") }} : editor </span>
-          <span>{{ t("login.password") }} : {{ t("login.any") }} </span>
+          <span>{{ t('login.username') }} : editor</span>
+          <span>{{ t('login.password') }} : {{ t('login.any') }}</span>
         </div>
 
         <el-button
@@ -100,19 +94,16 @@
           type="primary"
           @click="showDialog = true"
         >
-          {{ t("login.thirdparty") }}
+          {{ t('login.thirdparty') }}
         </el-button>
       </div>
     </el-form>
 
-    <el-dialog
-      :title="t('login.thirdparty')"
-      v-model="showDialog"
-    >
-      {{ t("login.thirdpartyTips") }}
-      <br>
-      <br>
-      <br>
+    <el-dialog :title="t('login.thirdparty')" v-model="showDialog">
+      {{ t('login.thirdpartyTips') }}
+      <br />
+      <br />
+      <br />
       <SocialSign />
     </el-dialog>
   </div>
@@ -192,11 +183,11 @@ export default defineComponent({
           state.passwordType = 'password'
         }
         nextTick(() => {
-          (passwordRef.value as any).focus()
+          ;(passwordRef.value as any).focus()
         })
       },
       handleLogin: () => {
-        (loginFormRef.value as any).validate(async(valid: boolean) => {
+        ;(loginFormRef.value as any).validate(async (valid: boolean) => {
           if (valid) {
             state.loading = true
             await store.dispatch(UserActionTypes.ACTION_LOGIN, state.loginForm)
@@ -205,7 +196,7 @@ export default defineComponent({
                 path: state.redirect || '/',
                 query: state.otherQuery
               })
-              .catch(err => {
+              .catch((err) => {
                 console.warn(err)
               })
             // Just to simulate the time of the request
@@ -228,18 +219,21 @@ export default defineComponent({
       }, {} as LocationQuery)
     }
 
-    watch(() => route.query, query => {
-      if (query) {
-        state.redirect = query.redirect?.toString() ?? ''
-        state.otherQuery = getOtherQuery(query)
+    watch(
+      () => route.query,
+      (query) => {
+        if (query) {
+          state.redirect = query.redirect?.toString() ?? ''
+          state.otherQuery = getOtherQuery(query)
+        }
       }
-    })
+    )
 
     onMounted(() => {
       if (state.loginForm.username === '') {
-        (userNameRef.value as any).focus()
+        ;(userNameRef.value as any).focus()
       } else if (state.loginForm.password === '') {
-        (passwordRef.value as any).focus()
+        ;(passwordRef.value as any).focus()
       }
     })
 
@@ -309,9 +303,12 @@ export default defineComponent({
   video {
     position: absolute;
     /* Vertical and Horizontal center*/
-    top: 0; left: 0; right: 0; bottom: 0;
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
   }

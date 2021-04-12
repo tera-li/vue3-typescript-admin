@@ -1,10 +1,3 @@
-<!--
- * @Description:
- * @Autor: scy😊
- * @Date: 2021-01-23 11:03:02
- * @LastEditors: scy😊
- * @LastEditTime: 2021-01-23 11:04:08
--->
 <template>
   <el-form>
     <el-form-item label="Name">
@@ -14,18 +7,12 @@
       <el-input v-model="userInfo.email" />
     </el-form-item>
     <el-form-item>
-      <el-button
-        type="primary"
-        @click="submit"
-      >
-        Update
-      </el-button>
+      <el-button type="primary" @click="submit">Update</el-button>
     </el-form-item>
   </el-form>
 </template>
 
 <script lang="ts">
-
 import { defineComponent, PropType, reactive, toRefs } from 'vue'
 import { ElMessage } from 'element-plus'
 interface Profile {
@@ -55,7 +42,6 @@ export default defineComponent({
           duration: 5 * 1000
         })
       }
-
     })
 
     return { ...toRefs(dataMap) }
