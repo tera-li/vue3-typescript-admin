@@ -8,7 +8,7 @@ indent_style = space
 # 缩进空格
 indent_size = 2
 # 结尾换行
-end_of_line = crlf
+end_of_line = lf
 # 文件末尾换行符
 insert_final_newline = true
 # 删除代码前后空格
