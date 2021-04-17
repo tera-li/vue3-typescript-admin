@@ -1,6 +1,5 @@
 import { ActionTree, ActionContext } from 'vuex'
 
-// eslint-disable-next-line import/no-cycle
 import { RootState } from '@/store'
 import { SettingsState } from './state'
 import { Mutations } from './mutations'
