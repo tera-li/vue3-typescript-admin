@@ -1,8 +1,10 @@
 <template>
   <section class="app-main">
-    <router-view v-slot="{ Component }">
-      <keep-alive :include="cachedViews()">
-        <component :is="Component" />
+    <router-view :key="key" v-slot="{ Component }">
+      <keep-alive :include="cachedViews">
+        <transition name="fadeIn">
+          <component :is="Component" />
+        </transition>
       </keep-alive>
     </router-view>
   </section>
@@ -10,16 +12,16 @@
 
 <script lang="ts">
 import { useStore } from '@/store'
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({
   setup() {
     const store = useStore()
     const route = useRoute()
-    const cachedViews = (): (String | undefined)[] => {
+    const cachedViews = computed((): (String | undefined)[] => {
       return [...store.state.tagViews.cachedViews]
-    }
+    })
     const key = () => {
       return route.path
     }

@@ -1,6 +1,5 @@
 /* Global transition */
 // See https://vuejs.org/v2/guide/transitions.html for detail
-
 // fade
 .fade-enter-active,
 .fade-leave-active {
@@ -46,4 +45,20 @@
 
 .breadcrumb-leave-active {
   position: absolute;
+}
+
+// component-transition
+.fadeIn-enter-active {
+  animation: fadeIn-in 1s ease;
+}
+.fadeIn-leave-active {
+  animation: fadeIn-in 0s reverse;
+}
+@keyframes fadeIn-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
