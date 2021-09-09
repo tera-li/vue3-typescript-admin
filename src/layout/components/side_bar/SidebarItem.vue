@@ -31,7 +31,7 @@
         </el-menu-item>
       </SidebarItemLink>
     </template>
-    <el-submenu v-else :index="resolvePath(item.path)" popper-append-to-body>
+    <el-sub-menu v-else :index="resolvePath(item.path)" popper-append-to-body>
       <template #title>
         <svg
           v-if="item.meta && item.meta.icon"
@@ -56,7 +56,7 @@
           class="nest-menu"
         />
       </template>
-    </el-submenu>
+    </el-sub-menu>
   </div>
 </template>
 
@@ -144,13 +144,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.el-submenu.is-active > .el-submenu__title {
+.el-sub-menu.is-active > .el-sub-menu__title {
   color: $subMenuActiveText !important;
 }
 
 .full-mode {
-  .nest-menu .el-submenu > .el-submenu__title,
-  .el-submenu .el-menu-item {
+  .nest-menu .el-sub-menu > .el-sub-menu__title,
+  .el-sub-menu .el-menu-item {
     min-width: $sideBarWidth !important;
     background-color: $subMenuBg !important;
 
@@ -171,13 +171,13 @@ export default defineComponent({
       }
     }
 
-    .el-submenu {
+    .el-sub-menu {
       overflow: hidden;
 
-      & > .el-submenu__title {
+      & > .el-sub-menu__title {
         padding: 0px !important;
 
-        .el-submenu__icon-arrow {
+        .el-sub-menu__icon-arrow {
           display: none;
         }
 

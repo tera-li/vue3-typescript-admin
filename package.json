@@ -22,7 +22,7 @@
     "chalk": "^4.1.0",
     "core-js": "^3.6.5",
     "dayjs": "^1.10.3",
-    "element-plus": "^1.0.2-beta.71",
+    "element-plus": "^1.1.0-beta.9",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",
