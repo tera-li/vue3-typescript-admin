@@ -1,6 +1,6 @@
 import https from '@/utils/https'
 import { RootObject } from '@/model/rootObject'
-import { ContentType, Method } from 'axios-mapper'
+import { ContentType, Method } from '@/utils/http'
 import { ArticleModel } from '@/model/articleModel'
 import { ArticleList } from '@/model/articleList'
 

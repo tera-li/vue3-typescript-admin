@@ -2,7 +2,7 @@ import { RolesModels } from '@/model/getRolesModel'
 import { RootObject } from '@/model/rootObject'
 import { Routes } from '@/model/routesModel'
 import https from '@/utils/https'
-import { RequestParams, ContentType, Method } from 'axios-mapper'
+import { RequestParams, ContentType, Method } from '@/utils/http'
 
 export const getRoutes = () => {
   return https().request<RootObject<Routes>>(

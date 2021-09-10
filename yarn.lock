@@ -1563,7 +1563,7 @@
   "resolved" "https://registry.nlark.com/@types/q/download/@types/q-1.5.5.tgz"
   "version" "1.5.5"
 
-"@types/qs@*", "@types/qs@^6.9.5":
+"@types/qs@*":
   "integrity" "sha1-Y7t9Bn2xB8weRXwwO8JdUR/r9ss="
   "resolved" "https://registry.nlark.com/@types/qs/download/@types/qs-6.9.7.tgz?cache=0&sync_timestamp=1629708791613&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fqs%2Fdownload%2F%40types%2Fqs-6.9.7.tgz"
   "version" "6.9.7"
@@ -2731,19 +2731,10 @@
   "resolved" "https://registry.nlark.com/aws4/download/aws4-1.11.0.tgz"
   "version" "1.11.0"
 
-"axios-mapper@^0.4.4":
-  "integrity" "sha1-po9uW5iJwEVdIW/vEaQn+7Rc+v8="
-  "resolved" "https://registry.nlark.com/axios-mapper/download/axios-mapper-0.4.4.tgz"
-  "version" "0.4.4"
-  dependencies:
-    "@types/qs" "^6.9.5"
-    "axios" "^0.21.0"
-    "qs" "^6.9.4"
-
-"axios@^0.21.0":
-  "integrity" "sha1-ISl9UISyrutCL104575Pu4IjkBc="
-  "resolved" "https://registry.nlark.com/axios/download/axios-0.21.2.tgz?cache=0&sync_timestamp=1630750840511&other_urls=https%3A%2F%2Fregistry.nlark.com%2Faxios%2Fdownload%2Faxios-0.21.2.tgz"
-  "version" "0.21.2"
+"axios@^0.21.4":
+  "integrity" "sha1-xnuQ3AVo5cHPKwuFjEO6KOLtpXU="
+  "resolved" "https://registry.nlark.com/axios/download/axios-0.21.4.tgz"
+  "version" "0.21.4"
   dependencies:
     "follow-redirects" "^1.14.0"
 
@@ -10457,13 +10448,6 @@
   "integrity" "sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc="
   "resolved" "https://registry.nlark.com/q/download/q-1.5.1.tgz"
   "version" "1.5.1"
-
-"qs@^6.9.4":
-  "integrity" "sha1-STFIL6jWR6Wqt5nFJx0hM7mB+2o="
-  "resolved" "https://registry.nlark.com/qs/download/qs-6.10.1.tgz"
-  "version" "6.10.1"
-  dependencies:
-    "side-channel" "^1.0.4"
 
 "qs@~6.5.2":
   "integrity" "sha1-yzroBuh0BERYTvFUzo7pjUA/PjY="

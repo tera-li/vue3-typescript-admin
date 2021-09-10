@@ -2,7 +2,7 @@ import { RootObject } from '@/model/rootObject'
 import { UserInfoModel, Users } from '@/model/userModel'
 import https from '@/utils/https'
 import { LoginModel } from '@/views/user-manager/login/model/loginModel'
-import { RequestParams, ContentType, Method } from 'axios-mapper'
+import { RequestParams, ContentType, Method } from '@/utils/http'
 
 export const loginRequest = (userInfo: RequestParams) => {
   return https(false).request<RootObject<LoginModel>>(
