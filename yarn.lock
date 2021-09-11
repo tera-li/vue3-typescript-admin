@@ -10449,6 +10449,13 @@
   "resolved" "https://registry.nlark.com/q/download/q-1.5.1.tgz"
   "version" "1.5.1"
 
+"qs@^6.10.1":
+  "integrity" "sha1-STFIL6jWR6Wqt5nFJx0hM7mB+2o="
+  "resolved" "https://registry.nlark.com/qs/download/qs-6.10.1.tgz"
+  "version" "6.10.1"
+  dependencies:
+    "side-channel" "^1.0.4"
+
 "qs@~6.5.2":
   "integrity" "sha1-yzroBuh0BERYTvFUzo7pjUA/PjY="
   "resolved" "https://registry.nlark.com/qs/download/qs-6.5.2.tgz"

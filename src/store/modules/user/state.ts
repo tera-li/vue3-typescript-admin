@@ -1,7 +1,8 @@
-import { getToken } from '@/utils/cookies'
+import { getToken, getRefreshToken } from '@/utils/cookies'
 
 export interface UserState {
   token: string
+  refreshToken: string
   name: string
   avatar: string
   introduction: string
@@ -11,6 +12,7 @@ export interface UserState {
 
 export const state: UserState = {
   token: getToken() || '',
+  refreshToken: getRefreshToken() || '',
   name: '',
   avatar: '',
   introduction: '',

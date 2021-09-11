@@ -4,6 +4,7 @@ import { UserMutationTypes } from './mutation-types'
 
 export type Mutations<S = UserState> = {
   [UserMutationTypes.SET_TOKEN](state: S, token: string): void
+  [UserMutationTypes.SET_REFRESH_TOKEN](state: S, refreshToken: string): void
   [UserMutationTypes.SET_NAME](state: S, name: string): void
   [UserMutationTypes.SET_AVATAR](state: S, avatar: string): void
   [UserMutationTypes.SET_INTRODUCTION](state: S, introduction: string): void
@@ -14,6 +15,10 @@ export type Mutations<S = UserState> = {
 export const mutations: MutationTree<UserState> & Mutations = {
   [UserMutationTypes.SET_TOKEN](state: UserState, token: string) {
     state.token = token
+  },
+
+  [UserMutationTypes.SET_REFRESH_TOKEN](state: UserState, refreshToken: string) {
+    state.refreshToken = refreshToken
   },
 
   [UserMutationTypes.SET_NAME](state: UserState, name: string) {

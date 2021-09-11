@@ -1,5 +1,5 @@
 import { RootObject } from '@/model/rootObject'
-import { UserInfoModel, Users } from '@/model/userModel'
+import { UserInfoModel, RefreshModel } from '@/model/userModel'
 import https from '@/utils/https'
 import { LoginModel } from '@/views/user-manager/login/model/loginModel'
 import { RequestParams, ContentType, Method } from '@/utils/http'
@@ -22,8 +22,8 @@ export const userInfoRequest = () => {
   )
 }
 
-export const getUsers = (user: any) => {
-  return https().request<RootObject<Users>>(
+export const getRefresh = (user: any) => {
+  return https().request<RefreshModel>(
     'user/getUsers',
     Method.GET,
     user,
