@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/rcyj-FED/vue3-composition-admin-docs" target="_blank">
-    <img width="180" src="https://github.com/rcyj-FED/vue3-composition-admin-docs/blob/main/docs/.vuepress/public/icons/android-chrome-192x192.png" alt="logo">
+  <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
+    <img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo">
   </a>
 </p>
 
@@ -25,21 +25,13 @@
   </a>
 </p>
 
-> vue3-composition-admin 是一个管理端模板解决方案，它是基于 vue3,ts 和 element-plus，项目都是以 composition api 风格编写。
+> vue3-typescript-admin 是一个管理端模板解决方案，它是基于 vue3,ts 和 element-plus，项目都是以 composition api 风格编写。
 
 ## 简介
 
 项目的基础版本出自于源于花裤衩大佬的 vue-element-admin。
 
-版本：
-
-vue2+js 版本：[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-
-vue2+ts 版本：[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
-
 vue3 发布之后，性能增强，速度 vue2 的倍数，打包体积都在减小（treeshaking），composition api 增加了项目可读性。
-
-在线 demo 演示地址：https://admin-tmpl-test.rencaiyoujia.cn/
 
 ### 目录结构
 
@@ -85,7 +77,7 @@ admin-tmpl
 项目采用技术:
 
 - vue3 + composition api
-- typescript3.9
+- typescript
 - sass (dart sass)
 - [echats5](https://github.com/apache/echarts)
 
@@ -96,62 +88,18 @@ vue next 系列:
 - [vuex-4.0](https://github.com/vuejs/vuex)
 - [vue-vue-i18n-next](https://github.com/panter/vue-i18next)
 
-## Document
-
-- [博客文档地址](https://blog.csdn.net/zy_flyway/category_6335128.html)
-- [文档地址](https://rcyj-fed.github.io/vue3-composition-admin-docs/)
-- [文档项目 git 地址](https://github.com/rcyj-FED/vue3-composition-admin-docs)
-
 ## Setup
-
-项目主要是前端和 mock server（node）
-
-### 前后端都启动
-
-```shell
-  yarn
-  yarn start
-```
-
-or
 
 ```shell
   npm install
-  npm run start
 ```
 
-### 单独启动 Mock
-
-后台模拟服务器和其他版本不同，采用 koa2+Faker 进行模拟。
-
-- [Koa2](https://github.com/koajs/koa)
-- [Faker](https://github.com/Marak/faker.js)
-
-启动 mock server:
-
 ```shell
-    yarn mock
+  yarn serve:dev
 ```
 
-or
-
 ```shell
-    npm run mock
-```
-
-mock 需要部署到服务器，单独项目地址：https://github.com/rcyj-FED/admin-tmpl-mock
-mock 在线测试地址：https://admin-tmpl-mock-test.rencaiyoujia.cn/
-
-### 单独启动 vue admin
-
-```shell
-    yarn  serve:dev
-```
-
-or
-
-```shell
-    npm run serve:dev
+  npm run serve:dev
 ```
 
 多环境命令查看 package.json script:
@@ -179,22 +127,22 @@ or
 
 提交自动检测：
 
-```json
- "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+```shell
+"gitHooks": {
+  "pre-commit": "lint-staged"
+},
+"lint-staged": {
+  "*.{js,jsx,vue,ts,tsx}": [
+  "vue-cli-service lint",
+  "git add"
+  ]
+}
 ```
 
 ## Browsers support
 
 Modern browsers and Internet Explorer 10+.
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Safari |
+| IE / Edge | Firefox | Chrome | Safari |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IE10, IE11, Edge                                                                                                                                                                                                 | last 3 versions                                                                                                                                                                                                    | last 3 versions                                                                                                                                                                                                | last 3 versions                                                                                                                                                                                                |
