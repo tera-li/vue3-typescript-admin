@@ -1,16 +1,40 @@
 /* Element Variables */
 
 // Override Element UI variables
-$--color-primary: #1890ff;
-$--color-success: #13ce66;
-$--color-warning: #ffba00;
-$--color-danger: #ff4949;
-$--color-info: #5d5d5d;
-$--button-font-weight: 400;
-$--color-text-regular: #1f2d3d;
-$--border-color-light: #dfe4ed;
-$--border-color-lighter: #e6ebf5;
-$--table-border: 1px solid#dfe6ec;
+$--colors: (
+  'white': #ffffff,
+  'black': #000000,
+  'primary': (
+    'base': #3f4157
+  ),
+  'success': (
+    'base': #00c782
+  ),
+  'warning': (
+    'base': #e6a23c
+  ),
+  'danger': (
+    'base': #f56c6c
+  ),
+  'error': (
+    'base': #f56c6c
+  ),
+  'info': (
+    'base': #f29225
+  )
+);
+$--text-color: (
+  'primary': #3f4157,
+  'regular': #595c66,
+  'secondary': #868792,
+  'placeholder': #babdcc
+);
+$--border-color: (
+  'base': #e8e9f0,
+  'light': #e4e7ed,
+  'lighter': #ebeef5,
+  'extra-light': #f2f6fc
+);
 
 // Icon font path, required
 $--font-path: '~element-plus/packages/theme-chalk/src/fonts';
