@@ -45,5 +45,5 @@ $--font-path: '~element-plus/packages/theme-chalk/src/fonts';
 // The :export directive is the magic sauce for webpack
 // https://mattferderer.com/use-sass-variables-in-typescript-and-javascript
 :export {
-  theme: $--color-primary;
+  theme: 'red';
 }
