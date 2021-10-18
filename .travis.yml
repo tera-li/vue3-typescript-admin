@@ -1,25 +1,11 @@
-language: javascript
-# 分支
-branches:
-  only:
-    - main # 构建的分支
-# 缓存
-cache:
-  directories:
-    - node_modules # 依赖缓存的目录
-# 安装命令
+language: node_js
+
+node_js:
+  - 12
+
+cache: npm
+
 install:
   - npm install --registry=https://registry.npm.taobao.org
-  - npm run build:dev
-# 执行脚本
 script:
   - npm run build:dev
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN # github 上的token环境变量
-  local-dir: ./dist/ # 根据情况自定义到静态文件输出目录
-  target-branch: gh-pages
-  verbose: true
-  on:
-    branch: main
