@@ -1,11 +1,2 @@
 language: node_js
-# node版本
-node_js:
-  - 12
-
-cache: npm
-
-install:
-  - npm install --registry=https://registry.npm.taobao.org
-script:
-  - npm run build:dev
+script: true
