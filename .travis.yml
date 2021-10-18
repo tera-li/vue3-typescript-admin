@@ -3,10 +3,9 @@ language: node_js
 node_js:
   - 12
 
-cache: yarn
+cache: npm
 
 install:
-  - yarn
+  - npm install --registry=https://registry.npm.taobao.org
 script:
-  - yarn test # 运行测试
-  - yarn build
+  - npm run build:dev
