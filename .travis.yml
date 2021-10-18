@@ -6,4 +6,4 @@ language: JAVASCRIPT
     - npm run build:dev
   branches:
     only:
-      - dev
+      - main
