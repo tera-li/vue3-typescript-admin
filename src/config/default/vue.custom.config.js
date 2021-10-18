@@ -1,5 +1,5 @@
 const vueDefaultConfig = {
-  publicPath: '/',
+  publicPath: './',
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: true,

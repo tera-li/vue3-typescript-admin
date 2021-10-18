@@ -1,4 +1,9 @@
 language: JAVASCRIPT
   install:
     - npm install --registry=https://registry.npm.taobao.org
-  script: true
+    - npm run build:dev
+  script:
+    - npm run build:dev
+  branches:
+    only:
+      - dev
