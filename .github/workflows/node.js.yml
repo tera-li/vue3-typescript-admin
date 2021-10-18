@@ -32,6 +32,5 @@ jobs:
       # 打包npm包
       - run: npm run build:dev --if-present
       # 部署环境
-      - name: deploy
       - run: git subtree push --prefix dist origin gh-pages
 
