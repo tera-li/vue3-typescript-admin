@@ -30,7 +30,7 @@ jobs:
       # 安装npm包
       - run: npm ci
       # 打包npm包
-      - run: npm run build:dev --if-present
+      - run: npm run build:prod --if-present
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
