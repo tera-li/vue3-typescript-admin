@@ -19,3 +19,4 @@ Object.keys(directives).forEach((key) => {
 })
 
 app.use(store).use(router).mount('#app')
+// 测试dev
