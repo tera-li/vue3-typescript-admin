@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["menu2"],{"494a":function(e,n,t){"use strict";t.r(n);var o=t("7a23"),c={style:{padding:"30px"}};function a(e,n,t,a,r,l){var d=Object(o["resolveComponent"])("el-alert");return Object(o["openBlock"])(),Object(o["createElementBlock"])("div",c,[Object(o["createVNode"])(d,{closable:!1,title:"menu 2"})])}var r=Object(o["defineComponent"])({}),l=t("6b0d"),d=t.n(l);const p=d()(r,[["render",a]]);n["default"]=p}}]);
+//# sourceMappingURL=menu2.44f55376.js.map
