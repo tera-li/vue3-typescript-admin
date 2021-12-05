@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["menu1-2-1"],{"2e3b":function(e,n,t){"use strict";t.r(n);var o=t("7a23"),c={style:{padding:"30px"}};function r(e,n,t,r,a,l){var p=Object(o["resolveComponent"])("el-alert");return Object(o["openBlock"])(),Object(o["createElementBlock"])("div",c,[Object(o["createVNode"])(p,{closable:!1,title:"menu 1-2-1",type:"warning"})])}var a=Object(o["defineComponent"])({}),l=t("6b0d"),p=t.n(l);const b=p()(a,[["render",r]]);n["default"]=b}}]);
-//# sourceMappingURL=menu1-2-1.bd765b9f.js.map
