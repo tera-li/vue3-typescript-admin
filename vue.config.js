@@ -69,15 +69,15 @@ module.exports = {
   configureWebpack() {
     return {
       // 剔除比较大的依赖包，使用cdn引入
-      externals: {
-        vue: 'Vue',
-        'vue-router': 'vueRouter',
-        vuex: 'vuex',
-        'element-plus': 'ELEMENT',
-        lodash: 'lodash',
-        axios: 'axios',
-        qs: 'qs'
-      },
+      // externals: {
+      //   vue: 'Vue',
+      //   'vue-router': 'vueRouter',
+      //   vuex: 'vuex',
+      //   'element-plus': 'ELEMENT',
+      //   lodash: 'lodash',
+      //   axios: 'axios',
+      //   qs: 'qs'
+      // },
       resolve: {
         alias: {
           '@': resolve('src'),
