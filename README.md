@@ -20,9 +20,7 @@
    <a href="https://github.com/npm/npm">
     <img src="https://img.shields.io/badge/npm-6.1.8-blue" alt="npm">
    </a>
-   <a href="https://gitter.im/vue3Admin/community">
-    <img src="https://badges.gitter.im/Join%20Chat.svg" alt="gitter">
-  </a>
+  
 </p>
 
 > vue3-typescript-admin 是一个管理端模板解决方案，它是基于 vue3,ts 和 element-plus，项目都是以 composition api 风格编写。
@@ -36,7 +34,7 @@ vue3 发布之后，性能增强，速度 vue2 的倍数，打包体积都在减
 ### 目录结构
 
 ```
-admin-tmpl
+vue3-typescript-admin
 ├─ .env.dev.build     # 开发环境
 ├─ .env.dev.serve     # 开发本地本地
 ├─ .env.prod.build    # 生产环境
@@ -46,7 +44,6 @@ admin-tmpl
 ├─ .eslintrc.js       # eslint
 ├─ README.md
 ├─ dist               # 打包dist
-├─ mock               # mock服务
 ├─ public             # 静态资源
 ├─ src                # 源码
 │  ├─ @types          # ts 声明
@@ -145,4 +142,6 @@ Modern browsers and Internet Explorer 10+.
 
 | IE / Edge | Firefox | Chrome | Safari |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IE10, IE11, Edge                                                                                                                                                                                                 | last 3 versions                                                                                                                                                                                                    | last 3 versions                                                                                                                                                                                                | last 3 versions                                                                                                                                                                                                |
+| IE10, IE11, Edge | last 3 versions | last 3 versions | last 3 versions |  
+
+![hljinjiang badge](https://visitor-badge.glitch.me/badge?page_id=hljinjiang.visitor-badge&left_color=red&right_color=green)
