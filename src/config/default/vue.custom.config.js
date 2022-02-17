@@ -8,6 +8,7 @@ const vueDefaultConfig = {
   title: 'vue3-typescript-admin',
   titleSeparator: ' - ',
   titleReverse: false,
+  productionSourceMap: false,
   devPort: '9999',
   abbreviation: 'vt2at',
   providePlugin: {},

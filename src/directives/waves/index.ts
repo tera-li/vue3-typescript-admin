@@ -5,7 +5,7 @@ export const waves: Directive = {
   beforeMount(el, binding) {
     el.addEventListener(
       'click',
-      (e: any) => {
+      (e: MouseEvent) => {
         const customOpts = Object.assign({}, binding.value)
         const opts = Object.assign(
           {

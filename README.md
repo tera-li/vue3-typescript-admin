@@ -33,17 +33,9 @@ vue3 发布之后，性能增强，速度 vue2 的倍数，打包体积都在减
 ### 目录结构
 
 ```
-admin-tmpl
-├─ .env.dev.build     # 开发环境
-├─ .env.dev.serve     # 开发本地本地
-├─ .env.prod.build    # 生产环境
-├─ .env.prod.serve    # 生产环境本地
-├─ .env.test.build    # 测试环境
-├─ .env.test.serve    # 测试环境本地
-├─ .eslintrc.js       # eslint
+vue3-typescript-admin
 ├─ README.md
 ├─ dist               # 打包dist
-├─ mock               # mock服务
 ├─ public             # 静态资源
 ├─ src                # 源码
 │  ├─ @types          # ts 声明
@@ -62,6 +54,13 @@ admin-tmpl
 │  ├─ styles          # 全局样式
 │  ├─ utils           # 全局公共方法
 │  └─ views           # 所有业务页面
+├─ .env.dev.build     # 开发环境
+├─ .env.dev.serve     # 开发本地本地
+├─ .env.prod.build    # 生产环境
+├─ .env.prod.serve    # 生产环境本地
+├─ .env.test.build    # 测试环境
+├─ .env.test.serve    # 测试环境本地
+├─ .eslintrc.js       # eslint
 ├─ tsconfig.json      # ts 编译配置
 └─ vue.config.js      # vue-cli 配置
 
@@ -131,6 +130,8 @@ or
 "lint-staged": {
   "*.{js,jsx,vue,ts,tsx}": [
   "vue-cli-service lint",
+  "prettier --config .prettierrc.json --write",
+  "eslint --cache --fix",
   "git add"
   ]
 }
@@ -140,6 +141,7 @@ or
 
 Modern browsers and Internet Explorer 10+.
 
-| IE / Edge | Firefox | Chrome | Safari |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IE10, IE11, Edge                                                                                                                                                                                                 | last 3 versions                                                                                                                                                                                                    | last 3 versions                                                                                                                                                                                                | last 3 versions                                                                                                                                                                                                |
+| IE / Edge | Firefox | Chrome | Safari | | - | - | - | - | | IE10, IE11, Edge | last 3 versions | last 3 versions |
+last 3 versions |
+
+![hljinjiang badge](https://visitor-badge.glitch.me/badge?page_id=hljinjiang.visitor-badge&left_color=red&right_color=green)

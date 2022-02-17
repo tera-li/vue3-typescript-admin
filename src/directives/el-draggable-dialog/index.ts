@@ -1,7 +1,7 @@
 import { Directive } from 'vue'
 
 export const elDraggableDialog: Directive = {
-  beforeMount(el, _, vnode) {
+  beforeMount(el, _, vNode) {
     const dragDom = document.querySelector('.el-dialog') as HTMLElement
     const dialogHeaderEl = document.querySelector(
       '.el-dialog__header'
@@ -65,10 +65,10 @@ export const elDraggableDialog: Directive = {
 
         // Emit on-dialog-drag event
         // See https://stackoverflow.com/questions/49264426/vuejs-custom-directive-emit-event
-        if (vnode.component) {
-          vnode.component.emit('on-dialog-drag')
-        } else if (vnode.el) {
-          vnode.el.dispatchEvent(new CustomEvent('on-dialog-drag'))
+        if (vNode.component) {
+          vNode.component.emit('on-dialog-drag')
+        } else if (vNode.el) {
+          vNode.el.dispatchEvent(new CustomEvent('on-dialog-drag'))
         }
       }
 
