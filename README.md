@@ -112,7 +112,7 @@ vue next 系列:
 ### eslint
 
 ```shell
-    yarn  lint
+    yarn lint
 ```
 
 or
